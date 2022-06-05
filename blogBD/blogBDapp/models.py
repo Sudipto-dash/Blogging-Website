@@ -57,6 +57,8 @@ class Blog(models.Model):
     title = models.CharField( #Blog Title
         max_length=250
     )
+    def __str__(self):
+        return self.title
     slug = models.SlugField(null=True, blank=True)
     banner = models.ImageField(upload_to='blog_banners')
     description = models.TextField()
