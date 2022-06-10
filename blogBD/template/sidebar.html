@@ -33,7 +33,7 @@
             <div class="content">
               <ul>
                 {%for category in categories%}
-                <li><a href="#">- {{category.title}}</a></li>
+                <li><a href="{%url 'category_blogs' category.slug%}">- {{category.title}}</a></li>
                 {%endfor%}
               </ul>
             </div>
@@ -47,7 +47,7 @@
             <div class="content">
               <ul>
                 {% for tag in tags|slice:"8" %}
-                <li><a href="#">{{tag.title}}</a></li>
+                <li><a href="{%url 'tag_blogs' tag.slug%}">{{tag.title}}</a></li>
                 {%endfor%}
               </ul>
             </div>

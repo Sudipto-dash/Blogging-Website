@@ -6,6 +6,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f3f3;
 }
 p {
 	margin-bottom: 0px;
@@ -159,7 +160,7 @@ header {
 	z-index: 99999;
 	width: 100%;
 	height: 100px;
-	background-color: #f7f7f7;
+	background-color: #f2efef;
 	-webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
@@ -1031,8 +1032,12 @@ footer p a:hover {
 	    left: 0;
 	    width: 100%;
 	    text-align: center;
-	    background-color: #fff;
+	    background-color: #f2efef;
 	    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+	}
+	.dropdown-item{
+	
+		text-align: center;
 	}
 	.navbar .navbar-nav .nav-item {
 		border-bottom: 1px solid #eee;
@@ -1084,4 +1089,11 @@ footer p a:hover {
 		margin-left: 0px;
 		margin-top: 60px;
 	}
+}
+.dropdown-menu {
+background-color: #f2efef;
+}
+
+.dropdown-item:hover{
+	color: #da4747!important;
 }
