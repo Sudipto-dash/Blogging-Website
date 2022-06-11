@@ -1097,3 +1097,17 @@ background-color: #f2efef;
 .dropdown-item:hover{
 	color: #da4747!important;
 }
+.empty-like{
+	color: rgb(184, 178, 178) !important;
+	font-size: 25px;
+}
+.empty-like:hover{
+	color: #da4747!important;
+}
+
+.icon{
+	font-size: 50px;
+}
+.owl-banner .owl-nav button span:hover{
+	color: #da4747;
+}

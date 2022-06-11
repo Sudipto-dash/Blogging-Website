@@ -83,3 +83,15 @@ def tag_blogs(request,slug):
         "all_blog": all_blog
     }
     return render(request,'tag_blogs.html',context)
+
+def blog_details(request,slug):
+    blog = get_object_or_404(Blog,slug=slug)
+    category = Category.objects.get(id = blog.category.id)
+    tags = Tag.objects.order_by('-created_date')[:5]
+    related_blogs = category.category_blogs.all()
+    context = {
+        "blog": blog,
+        "related_blogs":related_blogs,
+        "tags":tags
+    }
+    return render(request,'blog_details.html',context)
