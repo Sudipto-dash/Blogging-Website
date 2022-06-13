@@ -1144,3 +1144,39 @@ background-color: #f2efef;
 .blog-posts .submit-comment button:hover{
 	background-color: #08682a;
 }
+.fa-gratipay{
+	color: #da4747 !important;
+	font-size: 25px;
+}
+.empty-like{
+	color: rgb(184, 178, 178) !important;
+	font-size: 25px;
+}
+.fa-search{
+	color: rgb(184, 178, 178);
+}
+.btn-primary{
+	background-color: #ffffff00;
+    border-color: #ffffff00;
+}
+.btn-primary:hover{
+	background-color: #ffffff00;
+    border-color: #ffffff00;
+	
+}
+.fa-search:hover{
+	color: #da4747;
+	font-size: 20px;
+}
+.form-control:focus{
+	border-color: #da4747;
+	box-shadow: 0 0 0 .2rem rgba(207,16,30,.25);
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #ffffff00;
+     border-color: rgba(255, 255, 255, 0); 
+}
+.btn-primary.focus, .btn-primary:focus {
+	box-shadow: 0 0 0 .2rem rgba(205, 26, 38, 0.25);
+}
