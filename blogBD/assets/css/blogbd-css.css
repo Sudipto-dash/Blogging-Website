@@ -1199,3 +1199,18 @@ background-color: #f2efef;
 	color: black;
 	text-transform: uppercase;
 }
+.errorlist{
+	color: #e10808 !important;
+	padding: 5px;
+	font-size: 10px;
+}
+
+.contact-us .contact-form input{
+	margin-bottom: 10px;
+}
+input,textarea{
+	text-transform: none !important;
+}
+.alert {
+	background-color: rgb(98 216 52 / 17%);
+}

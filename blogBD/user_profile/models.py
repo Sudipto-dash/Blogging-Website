@@ -18,7 +18,7 @@ class User(AbstractUser):
         upload_to = "profile_images"
     )
     REQUIRED_FIELDS= ["email"]
-    objects = CustomUserManager
+    objects = CustomUserManager()
 
     def __str__(self):
         return self.username
