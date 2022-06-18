@@ -115,7 +115,7 @@ def blog_details(request,slug):
     }
     return render(request,'blog_details.html',context)
 
-@login_required(login_url='/')
+@login_required(login_url='login')
 def add_reply(request, blog_id, comment_id): #For Reply comment
     blog = get_object_or_404(Blog, id=blog_id)
     if request.method == "POST":
@@ -129,7 +129,7 @@ def add_reply(request, blog_id, comment_id): #For Reply comment
             )
     return redirect('blog_details', slug=blog.slug)
 
-@login_required(login_url='/')
+@login_required(login_url='login')
 def like_blog(request, pk):
     context = {}
     blog = get_object_or_404(Blog, pk=pk)

@@ -18,6 +18,13 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+#Admin Customization
+admin.site.site_header = "BlogBD Adminstration"
+admin.site.site_title = "BlogBD Admin"
+admin.site.index_title = "BlogBD"
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include ('blogBDapp.urls')),

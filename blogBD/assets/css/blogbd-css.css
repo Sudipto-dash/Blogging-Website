@@ -1218,3 +1218,20 @@ input,textarea{
 .text-class{
 	text-transform: none !important;
 }
+.contact-us .sidebar-heading h2 {
+	text-align: center !important;
+}
+.rowFix{
+	text-align: center;
+}
+.contact-us .contact-form input{
+	width: 60%;
+}
+
+.contact-us .contact-form button:hover{
+	background-color: #08682a;
+}
+.signUp-btn {
+	text-transform: none;
+	
+}

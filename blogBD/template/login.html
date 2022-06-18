@@ -10,7 +10,7 @@
         <div class="col-lg-12">
           <div class="down-contact">
             <div class="row">
-              <div class="col-lg-8">
+              <div class="col-lg-8 mx-auto">
                 <div class="sidebar-item contact-form">
                   <div class="sidebar-heading">
                     <h2>LOG IN TO YOUR ACCOUNT</h2>
@@ -18,7 +18,7 @@
                   <div class="content">
                     <form id="contact" action="" method="POST" novalidate>
                       {%csrf_token%}
-                      <div class="row">
+                      <div class="row rowFix">
                         {% if messages %}
                         <div class="col-md-12 col-sm-12">
                           {%include 'alert.html'%}
@@ -26,7 +26,7 @@
                         {%endif%}
                         <div class="col-md-12 col-sm-12">
                           <fieldset>
-                            <input name="username" type="text" id="username_id" placeholder="Your Username/Email" >
+                            <input name="username" type="text" id="username_id" placeholder="Your Username" >
                             <p class="error py-1 text-danger ">{{form.username.errors}}</p>
                           </fieldset>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="col-lg-12">
                           <fieldset>
                             <button type="submit" id="form-submit" class="main-button">Log In</button><br>
-                            <a href="{% url 'signup' %}" id="form-submit" class="main-button signUp-btn">SIGN UP</a>
+                            <a href="{% url 'signup' %}" id="form-submit" class="main-button signUp-btn">Sign Up</a>
                             <a>|</a>
                             <a href="#" id="form-submit" class="main-button mr-2 signUp-btn">Forgot Password?</a>
                           </fieldset>

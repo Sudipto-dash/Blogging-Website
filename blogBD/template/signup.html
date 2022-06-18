@@ -10,7 +10,7 @@
         <div class="col-lg-12">
           <div class="down-contact">
             <div class="row">
-              <div class="col-lg-8">
+              <div class="col-lg-8 mx-auto">
                 <div class="sidebar-item contact-form">
                   <div class="sidebar-heading">
                     <h2>CREATE AN ACCOUNT</h2>
@@ -18,7 +18,7 @@
                   <div class="content">
                     <form id="contact" action="" method="POST" novalidate>
                       {%csrf_token%}
-                      <div class="row">
+                      <div class="row rowFix">
                         <div class="col-md-12 col-sm-12">
                           <fieldset>
                             <input name="username"{%if form.is_bound%} value="{{form.username.value}}" {%endif%} type="text" id="username_id" placeholder="Enter your Username" >

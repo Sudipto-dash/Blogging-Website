@@ -59,7 +59,7 @@
                           <ul class="post-share">
                             <li id="like-count">{{blog.likes.count}}</li>
                             {% if liked_by %}
-                            <li class="pl-3 pr-3"><a href="#"><i class="fa fa-gratipay" ></i></a></li>
+                            <li class="pl-3 pr-3"><a href="{%url 'login' %}"><i class="fa fa-gratipay" ></i></a></li>
                             {%else%}
                             <li class="pl-3 pr-3"><a href="#"><i class="fa fa-gratipay empty-like" ></i></a></li>
                             {%endif%}
