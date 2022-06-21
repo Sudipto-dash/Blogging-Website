@@ -1235,3 +1235,11 @@ input,textarea{
 	text-transform: none;
 	
 }
+.profile-picture{
+	max-width: 100%;
+	width: 200px;
+	height: 200px;
+	/*border: 4px solid #ff00007b;*/
+	box-shadow: -4px 6px 12px 5px #8B2323, 
+				1px 1px 7px 2px #458B00;
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %} My Profile {%endblock title%}
+{% block content %}
+<!--User Profile-->
+<section class="profile">
+    <div class="container-fluid">
+        <div class="row py-5">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img class="rounded rounded-circle profile-picture" src="{{request.user.get_profile_picture}}" alt="">
+                    <ul class="text-center pt-5 pb-1">
+                        <li class="py-2">
+                            <span>Blogs:<strong>5</strong></span>
+                        </li>
+                        <li class="py-2">
+                            <span>Followers:<strong>5</strong></span>
+                        </li>
+                        <li class="py-2">
+                            <span>Following:<strong>5</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                col2
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

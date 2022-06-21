@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.contrib.auth import login,logout,authenticate
@@ -56,3 +57,6 @@ def signup_user(request):
         "form" : form
     }
     return render(request,'signup.html',context)
+
+def user_profile(request):
+    return render (request,'user_profile.html')
