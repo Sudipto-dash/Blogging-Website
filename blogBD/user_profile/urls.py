@@ -8,4 +8,5 @@ urlpatterns = [
     path ('signup/',signup_user,name='signup'),
     path ('logout/',logout_user,name='logout'),
     path ('profile/',user_profile,name='user_profile'),
+    path ('change_profile_picture/',change_profile_picture,name='change_profile_picture'),
 ]

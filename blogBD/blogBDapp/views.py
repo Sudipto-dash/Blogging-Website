@@ -30,7 +30,7 @@ def blogs(request):
     queryset = Blog.objects.order_by('-created_date')
     tags = Tag.objects.order_by('-created_date')
     page = request.GET.get('page', 1)
-    paginator = Paginator(queryset, 2) #no. of blogs showing
+    paginator = Paginator(queryset, 4) #no. of blogs showing
     try:
         blogs = paginator.page(page)
     except EmptyPage:
