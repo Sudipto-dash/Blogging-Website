@@ -824,9 +824,21 @@ footer ul.social-icons li a {
 	letter-spacing: 0.25px;
 	transition: all .3s;
 }
-
-footer ul.social-icons li a:hover {
-	color: #b70000;
+/*Social Icon Hover*/
+footer ul.social-icons li .faceboook:hover{
+	color: #4267b2 !important;
+}
+footer ul.social-icons li .twitter:hover{
+	color: #00acee !important;
+}
+footer ul.social-icons li .linkedin:hover{
+	color: #0072b1 !important;
+}
+footer ul.social-icons li .github:hover{
+	color: #6e5494 !important;
+}
+footer ul.social-icons li .youtube:hover{
+	color: #c4302b !important;
 }
 
 footer p {
@@ -1173,11 +1185,15 @@ background-color: #f2efef;
 	border-color: #b70000;
 	box-shadow: 0 0 0 .2rem rgba(207,16,30,.25);
 }
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+.search-act:not(:disabled):not(.disabled).active, .search-act:not(:disabled):not(.disabled):active, .show>.search-act.dropdown-toggle {
     color: #fff;
     background-color: #ffffff00;
     border-color: rgba(207, 68, 68, 0); 
     height: 50px;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+	background-color: #066402;
+    border-color: rgba(207, 68, 68, 0);
 }
 .btn-primary.focus, .btn-primary:focus {
 	box-shadow: 0 0 0 .2rem rgba(205, 26, 38, 0.25);
@@ -1253,5 +1269,29 @@ input,textarea{
 }
 .owl-carousel .owl-item img{
 	height: 300px;
+}
+.list-group-item{
+	background-color: rgba(5, 100, 2, 0);
+	border: none;
+}
+.text-color{
+	color: white;
+}
+.special-button{
+	background-color: #ffffff00;
+	border-color: #b7000063;
+	border-radius: 1em;
+	border-width: .1em;
+	color: black;
+	
+}
+
+.special-button:hover{
+	background-color: #08682a;
+	box-shadow: 1px 6px 5px 0 rgb(0 0 0 / 63%), 0 17px 20px 1px rgb(0 0 0 / 21%);
+	border-color: #054b0287;
+}
+.a-tag:hover{
+	color: white;
 }
 /*color button: #b70000*/
