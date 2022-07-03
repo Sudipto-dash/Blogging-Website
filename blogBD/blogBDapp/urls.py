@@ -12,5 +12,6 @@ urlpatterns = [
     path('like_blog/<int:pk>/', like_blog, name='like_blog'),
     path('search_blogs/', search_blogs, name='search_blogs'),
     path('my_blogs/', my_blogs, name='my_blogs'),
+    path('new_blog/', new_blog, name='new_blog'),
 
 ]
