@@ -3,7 +3,7 @@ from django.db import models
 from django.utils.text import slugify
 from user_profile.models import User
 from ckeditor.fields import RichTextField
-
+from .slug import generate_slug
 
 #Category
 class Category(models.Model):
@@ -66,8 +66,14 @@ class Blog(models.Model):
         return self.title
 
     def save(self, *args, **kwargs): #Slug will auto generate, basis of Title
-        self.slug = slugify(self.title)
-        super().save(*args, **kwargs)
+        updating = self.pk is not None
+        
+        if updating:
+            self.slug = generate_slug(self,self.title,update=True)
+            super().save(*args, **kwargs)
+        else:
+            self.slug = generate_slug(self, self.title)
+            super().save(*args, **kwargs)
 
 
 #Comments

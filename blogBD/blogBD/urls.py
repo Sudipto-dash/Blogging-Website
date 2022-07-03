@@ -24,7 +24,10 @@ admin.site.site_header = "BlogBD Adminstration"
 admin.site.site_title = "BlogBD Admin"
 admin.site.index_title = "BlogBD"
 
-
+#overlapping problem solved
+admin.autodiscover()
+admin.site.enable_nav_sidebar = False
+#----
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include ('blogBDapp.urls')),
