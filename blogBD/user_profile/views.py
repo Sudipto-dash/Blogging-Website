@@ -106,3 +106,11 @@ def change_profile_picture(request):
             print(form.errors)
 
     return redirect('user_profile')
+
+
+def view_profile(request,username):
+    account = get_object_or_404(User, username = username)
+    context = {
+        "account":account
+    }
+    return render(request,'view_profile.html',context)

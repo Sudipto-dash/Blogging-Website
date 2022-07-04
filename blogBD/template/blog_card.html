@@ -8,11 +8,11 @@
         <span>{{blog.category}}</span>
         <a href="{%url 'blog_details' blog.slug%}"><h4>{{blog.title}}</h4></a>
         <ul class="post-info">
-            <li><a href="#">{{blog.user.username}}</a></li>
+            <li><a href="{%url 'view_profile' blog.user.username%}">{{blog.user.username}}</a></li>
             <li><a href="#">{{blog.created_date}}</a></li>
             <li><a href="#">{{blog.blog_comments.all.count}} comments</a></li>
         </ul>
-        <p>{{blog.description|truncatewords:20}}</p>
+        <p>{{blog.description|truncatechars_html:200|safe}}</p>
         <div class="post-options">
           <div class="row">
             <div class="col-lg-12">

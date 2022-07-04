@@ -18,7 +18,7 @@
                     <div class="card-body">
                       <p class="card-text d-flex flex-row">
                         {{blog.title|truncatechars:15}}
-                        <a class="px-2 ml-auto" href="#">
+                        <a class="px-2 ml-auto" href="{%url 'edit_blog' blog.slug%}">
                           <i class="fa fa-edit"></i>
                         </a>
                         <a class="px-2" href="?delete={{blog.pk}}">

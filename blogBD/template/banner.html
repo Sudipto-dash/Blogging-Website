@@ -12,7 +12,7 @@
               </div>
               <a href="{%url 'blog_details' blog.slug%}"><h4>{{blog.title}}</h4></a>
               <ul class="post-info">
-                <li><a href="#">{{blog.user.username}}</a></li>
+                <li><a href="{%url 'view_profile' blog.user.username%}">{{blog.user.username}}</a></li>
                 <li><span class="text-color">{{blog.created_date}}</span></li>
                 <li><span class="text-color">{{blog.blog_comments.all.count}} comments</span></li>
               </ul>

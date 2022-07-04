@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% load static %}
-{% block title %} Add New Blog {%endblock title%}
+{% block title %} Edit Blog {%endblock title%}
 {% block content %}
 
 <section class="add-blog">
@@ -8,44 +8,44 @@
         <div class="row py-5 justify-content-center">
             <div class="col-md-8">
                 <div class="sidebar-heading">
-                    <h2 class="my-3 text-center">ADD NEW BLOG</h2>
+                    <h2 class="my-3 text-center">EDIT YOUR POST</h2>
                   </div>
                 <form action="" method="POST" enctype="multipart/form-data">
                     {{form.media}}
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="title">Blog Title</label>
-                        <input class="form-control" placeholder="Make a title" type="text" name="title">
-                        <p class="text-danger py-1 errors">{{form.title.errors}}</p>
+                        <input class="form-control" type="text"  name="title" value="{{form.instance.title}}">
+                        <p class="text-danger py-1 errors">{{form.instance.title.errors}}</p>
                     </div>
                     <div class="form-group">
                         <label for="title">Blog Category</label>
                         <select class="form-control" name="category" id="category_id">
                             
                         {% for category in categories %}
-                            <option value="{{category.id}}">{{category.title}}</option>
+                            <option value="{{category.id}}" {% if form.instance.category.pk == category.pk %}selected {% endif %}>{{category.title}}</option>
                         {% endfor %}
                         
-                        <p class="text-danger py-1 errors">{{form.category.errors}}</p>
+                        <p class="text-danger py-1 errors">{{form.instance.category.errors}}</p>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="title">Description</label>
-                        {{form.description|safe}}
-                        <p class="text-danger py-1 errors">{{form.description.errors}}</p>
+                        {{form.description |safe}}
+                        <p class="text-danger py-1 errors">{{form.instance.description.errors}}</p>
                     </div>
                     <div class="form-group">
                         <label for="title">Blog Banner</label>
-                        <input class="form-control" class="form-control" type="file" name="banner">
-                        <p class="text-danger py-1 errors">{{form.banner.errors}}</p>
+                        <input class="form-control" value="{{form.instance.banner.url}}" class="form-control" type="file" name="banner">
+                        <p class="text-danger py-1 errors">{{form.instance.banner.errors}}</p>
                     </div>
                     <div class="form-group">
                         <label for="title">Tags</label>
-                        <textarea class="form-control" name="tags" id="" cols="30" rows="10" placeholder="Enter comma(,) to add more"></textarea>
-                        <p class="text-danger py-1 errors">{{form.tags.errors}}</p> 
+                        <textarea class="form-control" name="tags" id="" cols="30" rows="10" >{{form.instance.tags}}</textarea>
+                        <p class="text-danger py-1 errors">{{form.instance.tags.errors}}</p> 
                     </div>
                     <div class="form-group my-5 text-center">
-                        <button type="submit" class="btn btn-primary btn-block special-button">Post</button>
+                        <button type="submit" class="btn btn-primary btn-block special-button">UPDATE</button>
                     </div>
                 </form>
             </div>
