@@ -5,13 +5,14 @@ from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from matplotlib.style import context
 from django.views.decorators.cache import never_cache
+from pyparsing import FollowedBy
 from .forms import (
     userSignUpForm,
     loginForm,
     UserProfileUpdateForm,
     ProfilePictureUpdateForm
 )
-from .models import User
+from .models import User,Follow
 from .decorators import (
     not_logged_in_required
 )
@@ -110,7 +111,53 @@ def change_profile_picture(request):
 
 def view_profile(request,username):
     account = get_object_or_404(User, username = username)
+    following = False
+    muted = None
+
+    if request.user.is_authenticated:
+        
+        if request.user.id == account.id:
+            return redirect('user_profile')
+        followers = account.followers.filter(
+            followed_by__id = request.user.id
+        )
+        
+        if followers.exists():
+            following = True
+            messages.success(request, "You have started following  " + account.username)
+
+    
+    if following:
+        queryset = followers.first()
+        if queryset.muted:
+            muted = True
+        else:
+            muted = False
     context = {
-        "account":account
+        "account":account,
+        "following": following,
+        "muted": muted
     }
     return render(request,'view_profile.html',context)
+
+#Follow/Unfolow
+@login_required(login_url = "login")
+def follow_or_unfollow_user(request, user_id):
+    followed = get_object_or_404(User, id=user_id)
+    followed_by = get_object_or_404(User, id=request.user.id)
+
+    follow, created = Follow.objects.get_or_create(
+        followed=followed,
+        followed_by=followed_by
+    )
+
+    if created:
+        followed.followers.add(follow)
+
+    else:
+        followed.followers.remove(follow)
+        
+        follow.delete()
+        messages.success(request, "Profile is unfollowed!  ")
+
+    return redirect("view_profile", username=followed.username)

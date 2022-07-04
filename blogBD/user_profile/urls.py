@@ -10,4 +10,5 @@ urlpatterns = [
     path ('profile/',user_profile,name='user_profile'),
     path ('change_profile_picture/',change_profile_picture,name='change_profile_picture'),
     path ('view_profile/<str:username>/',view_profile,name='view_profile'),
+    path ('follow_or_unfollow_user/<int:user_id>/',follow_or_unfollow_user,name='follow_or_unfollow_user'),
 ]

@@ -1341,9 +1341,25 @@ textarea.description-area{
 	border-radius: 0.25rem;
 }
 .profile-border{
-	border-style: double;
-    border: 2px solid #029500;
-	box-shadow: 1px 6px 5px 0 rgb(0 0 0 / 63%), 0 17px 20px 1px rgb(0 0 0 / 21%);
-	border-radius: 0.25rem;
-
+	position: relative;
+	box-shadow:  -4px 6px 20px 0px rgb(116 7 7 / 71%),1px -1px 8px 3px rgb(11 71 6 / 66%);
+	border-radius: 0.75rem;
+	margin-bottom: 35px;
+	width: 90% !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+.card-border:hover{
+	box-shadow:  -6px 6px 5px 0px rgb(69 9 9 / 71%), 2px -3px 4px 0px rgb(11 71 6 / 66%);
+	border-radius: 0.75rem;
+	margin-bottom: 15px;
+}
+.header-border{
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	border-radius: 0.75rem;
+	margin-bottom: 35px;
+	width: 50% !important;
+	margin-left: auto;
+	margin-right: auto;
+	
 }
