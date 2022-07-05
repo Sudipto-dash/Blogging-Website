@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blogBDapp',
     'user_profile',
     'ckeditor',
+    'notification',
 ]
 
 MIDDLEWARE = [
