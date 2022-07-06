@@ -68,7 +68,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'blogBDapp.context_processor.getallcategories'
+                'blogBDapp.context_processor.getallcategories',
+                'user_profile.context_processor.user_notifications'
             ],
         },
     },

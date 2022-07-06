@@ -1363,3 +1363,20 @@ textarea.description-area{
 	margin-right: auto;
 	
 }
+
+.brand-logo{
+	height: 85px !important;
+	width: 215px !important;
+	object-fit: cover !important;
+}
+header .navbar{
+	padding: 0px 0px !important;
+}
+@media (max-width: 992px)
+{
+.navbar .navbar-brand {
+    position: absolute;
+    left: 30px;
+    top: -4px;
+}}
+

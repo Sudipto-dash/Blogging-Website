@@ -8,7 +8,7 @@ from user_profile.models import User
 # Create your models here.
 class Notifications(models.Model):
 
-    notification_type= ("Blog","Like","Follow")
+    NOTIFICATION_TYPES= ("Blog","Like","Follow")
 
     content_type=models.ForeignKey(
         ContentType,
@@ -23,9 +23,9 @@ class Notifications(models.Model):
     )
     text = models.CharField(max_length=150)
     is_seen = models.BooleanField(default=False)
-    notifications_type = models.CharField(
+    notification_types = models.CharField(
         max_length =  20,
-        choices= list(zip(notification_type,notification_type))
+        choices= list(zip(NOTIFICATION_TYPES,NOTIFICATION_TYPES))
     )
     created_date = models.DateTimeField(auto_now_add=True)
 

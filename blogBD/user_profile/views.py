@@ -1,3 +1,4 @@
+import imp
 import re
 from django.shortcuts import redirect, render,get_object_or_404
 from django.contrib import messages
@@ -12,6 +13,7 @@ from .forms import (
     UserProfileUpdateForm,
     ProfilePictureUpdateForm
 )
+from notification.models import Notifications, Notifications
 from .models import User,Follow
 from .decorators import (
     not_logged_in_required
@@ -161,3 +163,17 @@ def follow_or_unfollow_user(request, user_id):
         messages.success(request, "Profile is unfollowed!  ")
 
     return redirect("view_profile", username=followed.username)
+
+#Notifications Show
+@login_required(login_url="login")
+def user_notifications(request):
+
+    notifications = Notifications.objects.filter(
+        user = request.user,
+        is_seen = False
+    )
+
+    for notify in notifications:
+        notify.is_seen = True
+        notify.save()
+    return render(request,'notifications.html')

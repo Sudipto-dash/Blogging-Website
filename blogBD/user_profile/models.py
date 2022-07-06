@@ -35,12 +35,12 @@ class User(AbstractUser):
 
 #Social Model   
 class Follow(models.Model):
-    followed = models.ForeignKey(
+    followed = models.ForeignKey( #who is followed by others
         User,
         related_name='user_followers',
         on_delete=models.CASCADE
     )
-    followed_by = models.ForeignKey(
+    followed_by = models.ForeignKey( #who follows
         User,
         related_name='user_follows',
         on_delete=models.CASCADE

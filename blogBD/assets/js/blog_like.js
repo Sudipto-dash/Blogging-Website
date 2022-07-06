@@ -28,3 +28,4 @@ likeIcon.onclick = () => {
         console.log(error);
     })
 }
+
