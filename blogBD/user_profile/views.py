@@ -177,3 +177,25 @@ def user_notifications(request):
         notify.is_seen = True
         notify.save()
     return render(request,'notifications.html')
+
+#Mute/Unmute a user 
+
+@login_required(login_url="login")
+def mute_or_unmute(request,user_id):
+    user = get_object_or_404(User,pk = user_id)
+    follower = get_object_or_404(User,pk = request.user.pk)
+
+    instance = get_object_or_404(
+        Follow,
+        followed=user,
+        followed_by=follower
+    )
+    if instance.muted:
+        instance.muted=False
+        instance.save()
+    
+    else:
+        instance.muted=True
+        instance.save()
+    
+    return redirect("view_profile", username=user.username)

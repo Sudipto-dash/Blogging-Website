@@ -12,4 +12,5 @@ urlpatterns = [
     path ('view_profile/<str:username>/',view_profile,name='view_profile'),
     path ('follow_or_unfollow_user/<int:user_id>/',follow_or_unfollow_user,name='follow_or_unfollow_user'),
     path ('user_notifications/',user_notifications,name='user_notifications'),
+    path ('mute_or_unmute/<int:user_id>/',mute_or_unmute,name='mute_or_unmute'),
 ]

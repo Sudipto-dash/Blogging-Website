@@ -32,6 +32,23 @@
                                     Unfollow
                                 </button>
                                 </a>
+                                {%if muted%}
+                                <li class="py-2">
+                                <a class="text-decoration-none text-color a-tag" href="{% url 'mute_or_unmute' account.id %}">
+                                    <button class="btn btn-primary special-button">
+                                    Unmute
+                                </button>
+                                </a>
+                                
+                                {%else%}
+                                <li class="py-2">
+                                <a class="text-decoration-none text-color a-tag" href="{% url 'mute_or_unmute' account.id %}">
+                                    <button class="btn btn-primary special-button">
+                                    Mute
+                                </button>
+                                </a>
+                            </li>
+                                {%endif%}
                                 {%else%}
                                 <a class="text-decoration-none text-color a-tag" href="{% url 'follow_or_unfollow_user' account.id %}">
                                     <button class="btn btn-primary special-button">
@@ -39,14 +56,6 @@
                                 </button>
                                 </a>
                                 {%endif%}
-                            </li>
-                            
-                            <li class="py-2">
-                                <a class="text-decoration-none text-color a-tag" href="#">
-                                    <button class="btn btn-primary special-button">
-                                    Mute
-                                </button>
-                                </a>
                             </li>
                         </ul>
                     </div>
