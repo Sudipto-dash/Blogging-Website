@@ -6,7 +6,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f7f3f3;
+  background-color: #bd7c7c28;
 }
 p {
 	margin-bottom: 0px;
@@ -1223,7 +1223,7 @@ background-color: #f2efef;
     height: 50px;
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
-	background-color: #066402;
+	
     border-color: rgba(207, 68, 68, 0);
 }
 .btn-primary.focus, .btn-primary:focus {
@@ -1379,3 +1379,30 @@ header .navbar{
     left: 30px;
     top: -4px;
 }}
+.notify-msg{
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	border-radius: 0.75rem;
+	margin-bottom: 10px;
+	width: 100% !important;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #95520019;
+}
+.notify-msg:hover{
+	box-shadow:  -3px 3px 0px 2px rgb(69 9 9 / 71%), -3px 3px 0px 4px rgb(11 71 6 / 66%);
+	border-radius: 0.75rem;
+	margin-bottom: 20px;
+}
+.hov-cls a:hover{
+	background-color: #066402!important;
+	color: white !important;
+	border-color: #066402 !important;
+}
+.sidebar-design{
+	border-style: dotted;
+  	border-width: 1px;
+}
+.dropdown-item.active, .dropdown-item:active{
+	
+    background-color: #c2c5c92a;
+}

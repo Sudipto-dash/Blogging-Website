@@ -5,7 +5,7 @@
 
     {%for page in blogs.paginator.page_range%}
     {%if page == blogs.number%} <!--showing only the active page-->
-        <li class="active"><a href="?page={{page}}">{{page}}</a></li>
+        <li class="active hov-cls "><a href="?page={{page}} ">{{page}}</a></li>
     {%else%}
     
         <li class=""><a href="?page={{page}}">{{page}}</a></li>
