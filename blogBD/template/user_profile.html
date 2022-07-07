@@ -67,6 +67,15 @@
                             </button>
                             </a>
                         </li>
+                        {%if account.is_superuser%}
+                        <li class="list-group-item my-1">
+                            <a class="text-decoration-none text-color a-tag" href="{% url 'admin:index' %}">
+                                <button class="btn btn-primary special-button">
+                                Admin
+                            </button>
+                            </a>
+                        </li>
+                        {%endif%}
                     </ul>
                 </div>
                 <div class="col-md-8">

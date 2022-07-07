@@ -126,7 +126,6 @@ def view_profile(request,username):
         
         if followers.exists():
             following = True
-            messages.success(request, "You have started following  " + account.username)
 
     
     if following:
@@ -155,12 +154,13 @@ def follow_or_unfollow_user(request, user_id):
 
     if created:
         followed.followers.add(follow)
+        messages.success(request, "You have started following  " +followed.username)
 
     else:
         followed.followers.remove(follow)
         
         follow.delete()
-        messages.success(request, "Profile is unfollowed!  ")
+        messages.success(request, "You are no longer following " +followed.username)
 
     return redirect("view_profile", username=followed.username)
 

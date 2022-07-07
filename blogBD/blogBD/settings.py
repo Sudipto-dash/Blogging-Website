@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from lib2to3.pytree import Base
 from pathlib import Path
 import os
+from telnetlib import AUTHENTICATION
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -136,3 +137,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user_profile.user' #For using custom user
+
+AUTHENTICATION_BACKENDS = (
+    "user_profile.email_auth.EmailAuthenticationBackend",
+    "django.contrib.auth.backends.ModelBackend"
+)

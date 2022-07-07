@@ -14,7 +14,8 @@
                 <div class="col-md-4">
                     <div class="text-center profile-border">
                         <img class="rounded rounded-circle profile-picture mt-5" src="{{account.get_profile_picture}}" alt="">
-                        <h4 class="text-monospace text-center mb-2 mt-5 ">{{account.username}}</h4>
+                        <h4 class="text-monospace text-center mb-2 mt-5 " style="font-weight:Bold ;">{{account.username}}</h4>
+                        <h6 class="text-monospace text-center mb-2 mt-2 "><small>{{account.email}}</small></h6>
                         <ul class="text-center py-3">
                             <li class="py-2">
                                 <span>Posts: <strong>{{account.user_blogs.count}}</strong></span>
@@ -69,7 +70,7 @@
                         <div class="col-md-4 my-2">
                             <div  class="card card-border" >
                             <a href="{% url 'blog_details' blog.slug %}">
-                                <img class="card-img-top img-fluid" style="width: 100%; height: 320px;" src="{{blog.banner.url}}" alt="Card image cap">
+                                <img class="card-img-top img-fluid" style="width: 100%; height: 280px;" src="{{blog.banner.url}}" alt="Card image cap">
                                 <div class="card-body">
                                   <p class="card-text d-flex flex-row">
                                     <p>{{blog.title|truncatechars:35}}</p> 
