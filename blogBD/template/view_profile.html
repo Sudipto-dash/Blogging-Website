@@ -66,6 +66,7 @@
                     <h4 class="text-monospace text-center mb-5 header-border">{{account.username}}'s BLOGS</h4>
                     
                     <div class="row pt-1 mb-2">
+                        {% if blog in account.user_blogs.count > 0 %}
                         {% for blog in account.user_blogs.all %}
                         <div class="col-md-4 my-2">
                             <div  class="card card-border" >
@@ -83,6 +84,11 @@
                             </div>
                         </div>
                         {% endfor %}
+                        {%else%}
+                            
+                            <h2 class="text-center No-Post"> No Post yet</h2>
+                        
+                        {%endif%}
                     </div>   
         </div>
 
