@@ -65,11 +65,11 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs): #Slug will auto generate, basis of Title
+    def save(self, *args, **kwargs):
         updating = self.pk is not None
         
         if updating:
-            self.slug = generate_slug(self,self.title,update=True)
+            self.slug = generate_slug(self, self.title, update=True)
             super().save(*args, **kwargs)
         else:
             self.slug = generate_slug(self, self.title)

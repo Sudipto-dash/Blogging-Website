@@ -1421,3 +1421,19 @@ header .navbar{
 	margin-right: auto;
 	background-color: #bbb5ad19;
 }
+.btn-investigate{
+	background-color: #ffffff00;
+	border-color: #b7000063;
+	border-radius: 1em;
+	border-width: .2em;
+	color: black;
+}
+.btn-investigate:hover{
+	background-color: #08682a;
+	box-shadow: 1px 6px 5px 0 rgb(0 0 0 / 63%), 0 17px 20px 1px rgb(0 0 0 / 21%);
+	border-color: #054b0287;
+	color: white !important;
+}
+.link-text{
+	color: black;
+}

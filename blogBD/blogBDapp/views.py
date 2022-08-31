@@ -255,7 +255,7 @@ def new_blog(request):
 @login_required(login_url='login')
 def edit_blog(request,slug):
 
-    blog =  get_object_or_404(Blog,slug=slug)
+    blog =  get_object_or_404(Blog, slug=slug)
     form = AddBlogForm(instance=blog)
 
     if request.method == "POST":

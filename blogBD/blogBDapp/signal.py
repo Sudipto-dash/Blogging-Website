@@ -6,20 +6,20 @@ from user_profile.models import Follow, User
 from notification.models import  Notifications
 
 @receiver (post_save,sender=Blog)
-def send_notifications_to_follower_when_blog_created(instance,created, *args, **kwargs):
+def send_notification_to_followers_when_blog_created(instance, created, *args, **kwargs):
     if created:
-        followers  = instance.user.followers.all()
+        followers = instance.user.followers.all()
 
-    for data in followers:
-        follower  = data.followed_by
-    
-    if not data.muted:
-        Notifications.objects.create(
-            content_object = instance,
-            user = follower,
-            text  =f"{instance.user.username} posted a new blog",
-            notification_types = "Blog"
-        )
+        for data in followers:
+            follower = data.followed_by
+            
+            if not data.muted:
+                Notifications.objects.create(
+                    content_object=instance,
+                    user=follower,
+                    text=f"{instance.user.username} posted a new blog",
+                    notification_types="Blog"
+                )
 
 @receiver(post_save, sender=Follow)
 def send_notification_to_user_when_someone_followed(instance, created, *args, **kwargs):
