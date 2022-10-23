@@ -27,6 +27,8 @@ jQuery( document ).ready(function( $ ) {
           }
         });
 
+        
+
         if ($('.owl-clients').length) {
             $('.owl-clients').owlCarousel({
                 loop: true,

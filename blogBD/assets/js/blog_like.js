@@ -30,3 +30,9 @@ likeIcon.onclick = () => {
 }
 
 
+/*<script src="http://translate.google.com/translate_a/element.js?cb=loadTranslate"></script>
+<script>
+  function loadTranslate(){
+    new google.translate.TranslateElement("translatebyGoogle");
+  }
+</script>*/

@@ -6,8 +6,26 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #bd7c7c28;
+  background-image: linear-gradient(90deg,rgb(226 192 88 / 20%),hsla(0, 0%, 81%, 0.374),rgb(255 193 7 / 20%));
+  /*background-size: 400% 400%;
+  background: linear-gradient();
+  position: relative;
+  animation-name: change 20s ease infinite;
+  animation-duration: change 10s;
+  animation-iteration-count: infinite;*/
 }
+/*@keyframes change {
+	0%{
+		background-position: 0 50% ;
+	}
+	50%{
+		background-position: 100% 50% ;
+	}
+	100%{
+		background-position: 0 50% ;
+	}
+	
+}*/
 p {
 	margin-bottom: 0px;
 	font-size: 15px;
@@ -160,7 +178,8 @@ header {
 	z-index: 99999;
 	width: 100%;
 	height: 100px;
-	background-color: #f2efef;
+	/*background-color: #f2efef;*/
+	background: linear-gradient(0deg,hsla(45, 100%, 51%, 0.4),hsl(0deg 0% 100% / 74%));
 	-webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;

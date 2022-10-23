@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% load static %}
-{% block title %}  {%endblock title%}
+{% block title %} Blog {%endblock title%}
 {% block content %}
 
 <section class="blog-posts grid-system">
@@ -31,7 +31,7 @@
                     </ul>
                     <p>{{blog.description |safe}}</p>
                     <a class="text-decoration-none text-color a-tag " href="https://www.google.be/search?q={{blog.title}}" target="_blank">
-                      <button class=" btn btn-primary btn-investigate">Investigate</button></a>
+                      <button class=" btn btn-primary btn-investigate">Google More</button></a>
                     <div class="post-options">
                       <div class="row">
                         <div class="col-6">
