@@ -27,7 +27,7 @@ pip install whitenoise
 ##  📸 Sample Screenshots
 *Home*
 
-<div align="right">
+<div align="left">
   <img src="https://github.com/user-attachments/assets/f032e566-bb34-4ab6-b8ee-ce8a38440649" alt="Home Page" width="400" />
   <img src="https://github.com/user-attachments/assets/78834dda-3d2e-4a68-91ea-b316b398e38a" alt="Home2" width="400" />
 </div>
@@ -46,7 +46,7 @@ pip install whitenoise
 
 *View Blog*
 
-<div align="right">
+<div align="left">
   <img src="https://github.com/user-attachments/assets/3c807ac8-30ab-4bee-aced-ca7d7ba7d6a2" alt="view blog1" width="400" />
   <img src="https://github.com/user-attachments/assets/c70701e2-5e2f-4989-9e46-2b0ab3f28aad" alt="view blog2" width="400" />
 </div>
