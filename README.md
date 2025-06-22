@@ -28,11 +28,13 @@ pip install whitenoise
 *Home*
 ![Home Page](https://github.com/user-attachments/assets/f032e566-bb34-4ab6-b8ee-ce8a38440649)
 ![Home2](https://github.com/user-attachments/assets/78834dda-3d2e-4a68-91ea-b316b398e38a)
+
 *Profile*
 ![Others profile](https://github.com/user-attachments/assets/0eee3d32-a96f-422f-8e95-d8c2da85d789)
 
 *Add new blog*
 ![adding new blog](https://github.com/user-attachments/assets/a58235ff-3e2c-4fd4-81a2-7c91615fdb89)
+
 
 *View Blog*
 ![view blog1](https://github.com/user-attachments/assets/3c807ac8-30ab-4bee-aced-ca7d7ba7d6a2)
