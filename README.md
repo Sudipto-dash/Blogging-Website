@@ -22,7 +22,6 @@ pip install ckeditor
 pip install Pillow
 pip install matplotlib
 pip install platformdirs
-pip install whitenoise
 ```
 ##  📸 Sample Screenshots
 *Home*
